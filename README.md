@@ -21,10 +21,10 @@ HTML es una implementación de un lenguaje de marcado, y como tal, permite espec
 
 El conjunto mínimo de tags que deben estar presentes son:
 <ul>
- <li>&lt;html></html>: es el elemento raíz del documento. Engloba todos los demás nodos.</li>
- <li>&lt;head></head>: contiene información, metadata, sobre el documento. </li>
- <li>&lt;title></title>: indica el título del documento. Debe ir dentro de la etiqueta <head>. </li>
- <li>&lt;body>&lt;/body>: define el cuerpo del documento. Todo aquello que no sea metadata, ni encabezado. </li>
+ <li>&lt;html>: es el elemento raíz del documento. Engloba todos los demás nodos.</li>
+ <li>&lt;head>: contiene información, metadata, sobre el documento. </li>
+ <li>&lt;title>: indica el título del documento. Debe ir dentro de la etiqueta <head>. </li>
+ <li>&lt;body>: define el cuerpo del documento. Todo aquello que no sea metadata, ni encabezado. </li>
 </ul>
  
 ## ¿Cuál es la utilidad e importancia de los enlaces o links entre páginas?  
@@ -74,4 +74,4 @@ El Rendering Engine de un Browser es el responsable de “renderizar”, es deci
 Los Browser más conocidos como Firefox, Chrome y Safari están basados en dos motores de renderización. Firefox utiliza Gecko, un motor de renderización propio de Mozilla. Tanto Safari como Chrome y Opera utilizan WebKit. En el caso de Internet Explorer utiliza Trident. 
 La importancia de conocer cada uno de ellos está dada por el análisis del documento HTML que realiza para poder mostrarnos en pantalla su contenido sino no podríamos observar nuestro sitio; dicho motor realiza el siguiente flujo básico:
 
-
+![](https://2.bp.blogspot.com/-sYd9VsZVp3A/V8OrSo1w3LI/AAAAAAAACq0/dz6AAsOo_D8pGykDzQ1bDkVd65Tuchs6QCEw/s1600/4.jpg)
