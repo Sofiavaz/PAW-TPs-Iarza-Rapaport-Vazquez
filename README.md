@@ -22,11 +22,13 @@ HTML es una implementación de un lenguaje de marcado, y como tal, permite espec
 El conjunto mínimo de tags que deben estar presentes son:
 
 <ul>
- <li>"<html></html>": es el elemento raíz del documento. Engloba todos los demás nodos.</li>
- <li>"<head></head>": contiene información, metadata, sobre el documento. </li>
- <li>"<title></title>": indica el título del documento. Debe ir dentro de la etiqueta <head>. </li>
- <li>"<body></body>": define el cuerpo del documento. Todo aquello que no sea metadata, ni encabezado. </li>
-<ul>
+
+ <li>&lt;html></html>: es el elemento raíz del documento. Engloba todos los demás nodos.</li>
+ <li>&lt;head></head>: contiene información, metadata, sobre el documento. </li>
+ <li>&lt;title></title>: indica el título del documento. Debe ir dentro de la etiqueta <head>. </li>
+ <li>&lt;body></body>: define el cuerpo del documento. Todo aquello que no sea metadata, ni encabezado. </li>
+
+</ul>
  
 ## ¿Cuál es la utilidad e importancia de los enlaces o links entre páginas?  
 
