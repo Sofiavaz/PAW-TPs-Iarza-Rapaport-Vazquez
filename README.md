@@ -6,7 +6,7 @@ Un lenguaje de marcado es un lenguaje que utiliza una sintaxis especial para des
 
 ## ¿Cuál es su utilidad?
 
-La utilidad de un lenguaje de marcado reside en la posibilidad de especificar y diferenciar los componentes mencionados. Por ejemplo, para que el motor de renderizado de un navegador web los distinga. Y en general, para cualquier contexto en que sea necesario definir tanto la estructura como la importancia de los elementos y la forma en que se organizan. 
+La utilidad de un lenguaje de marcado reside en la posibilidad de especificar y diferenciar los componentes mencionados. Por ejemplo, para que el motor de renderizado de un navegador web pueda distinguir entre ellos. Y en líneas generales, sirven para cualquier contexto en que sea necesario definir tanto la estructura de un documento, como la importancia de los elementos y la forma en que estos se organizan. 
 
 ## ¿Qué es un tag? ¿Qué es un atributo?
 
@@ -72,7 +72,7 @@ Tag &lt;video> atributos:
 
 El Rendering Engine de un Browser es el responsable de “renderizar”, es decir de mostrar el contenido solicitado en la pantalla del navegador. Por ejemplo, si el contenido solicitado es HTML, será el responsable de analizar el código HTML y CSS y de mostrar el contenido analizado en la pantalla.
 
-Los Browser más conocidos como Firefox, Chrome y Safari están basados en dos motores de renderización. Firefox utiliza Gecko, un motor de renderización propio de Mozilla. Tanto Safari como Chrome y Opera utilizan WebKit. En el caso de Internet Explorer utiliza Trident. 
-La importancia de conocer cada uno de ellos está dada por el análisis del documento HTML que realiza para poder mostrarnos en pantalla su contenido sino no podríamos observar nuestro sitio; dicho motor realiza el siguiente flujo básico:
+Los Browsers más conocidos como Firefox, Chrome y Safari están basados en dos motores de renderización. Firefox utiliza Gecko, un motor de renderización propio de Mozilla. Tanto Safari como Chrome y Opera utilizan WebKit. En el caso de Internet Explorer utiliza Trident. 
+La importancia de conocer cada uno de ellos está dada por el análisis del documento HTML que realiza para poder mostrarnos en pantalla su contenido, si no, no podríamos observar nuestro sitio; dicho motor realiza el siguiente flujo básico:
 
 ![](https://2.bp.blogspot.com/-sYd9VsZVp3A/V8OrSo1w3LI/AAAAAAAACq0/dz6AAsOo_D8pGykDzQ1bDkVd65Tuchs6QCEw/s1600/4.jpg)
