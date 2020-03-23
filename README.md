@@ -11,6 +11,7 @@ La utilidad de un lenguaje de marcado reside en la posibilidad de especificar y 
 ## ¿Qué es un tag? ¿Qué es un atributo?
 
 Los tags son los indicadores utilizados para denotar a los elementos en sí. Se distinguen del resto del documento a través de una sintaxis determinada, dependiente de cada implementación específica de un lenguaje de marcado. 
+
 Un atributo indica propiedades o información adicional de un elemento particular. Por ejemplo, para poder incorporar una imagen a un documento, necesitaremos un tag que permita introducir este recurso. Adicionalmente, es necesario indicar a quien quiera representar el documento, el path al origen de la imagen en cuestión. Esta dirección corresponde a una característica propia del recurso identificado con el tag, para lo cual utilizaremos un atributo.
 
 ## ¿Cuál es la utilidad de HTML? 
