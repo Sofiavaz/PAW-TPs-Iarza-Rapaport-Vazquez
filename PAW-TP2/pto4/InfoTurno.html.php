@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Informacion del turno</h2>
-    
+
     <p>Nombre: <?= $fullname?></p>
     <p>Email: <?= $email?></p>
     <p>Telefono: <?= $tel?></p>
@@ -20,7 +20,7 @@
     <p>Fecha del turno: <?= $appt_date?></p>
     <p>Hora del turno: <?= date("H:i", $appt_time) ?></p>
 
-    <img src = "<?= $nombre_imagen ?>" alt= "IMAGEN">
+    <img src = "<?= get_path_images($nombre_imagen) ?>" alt= "IMAGEN">
 
 </body>
 </html>
