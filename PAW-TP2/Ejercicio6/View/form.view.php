@@ -7,7 +7,11 @@
     <title>Formulario medico</title>
 </head>
 <body>
-    <form action="form.php" method="GET">
+    <nav>
+        <?php include 'navbar.view.php' ?>
+    </nav>
+
+    <form action="/form.php" method="POST">
         <label for="fullname">Nombre:</label>
         <input type="text" name="fullname" id="fullname" required>
         <br><br> 
@@ -29,7 +33,7 @@
         <br><br> 
         
         <label for="height">Altura:</label>
-        <input type="range" name="height" id="height" min="0" max="250">
+        <input type="range" name="height" id="height" min="100" max="230">
         <br><br> 
         
         <label for="birthdate">Fecha de nacimiento:</label>
