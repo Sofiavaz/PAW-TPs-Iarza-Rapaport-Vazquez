@@ -7,9 +7,8 @@
     <title>Error en datos recibidos</title>
 </head>
 <body>
-    <h2>Error en los datos del turno.</h2>
-    <p>Los datos recibidos no cumplen con las restricciones
-        impuestas.
+    <h2>Error en el turno.</h2>
+    <p>Mensaje: <?= $view_message?>
     </p>
 
     <?php foreach($invalid_fields as $field): ?>

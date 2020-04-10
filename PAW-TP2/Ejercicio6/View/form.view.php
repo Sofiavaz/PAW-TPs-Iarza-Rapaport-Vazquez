@@ -11,7 +11,7 @@
         <?php include 'navbar.view.php' ?>
     </nav>
 
-    <form action="/form.php" method="POST">
+    <form action="../alta_turno.php" method="POST">
         <label for="fullname">Nombre:</label>
         <input type="text" name="fullname" id="fullname" required>
         <br><br> 

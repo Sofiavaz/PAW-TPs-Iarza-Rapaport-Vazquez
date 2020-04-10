@@ -1,10 +1,9 @@
 <?php
 
-include 'Model/Turno.php';
 include 'Model/TurnoManager.php';
 
-use App\Model\Turno;
-use App\Model\TurnoManager;
+use app\Model\TurnoManager;
+use app\Model\Turno;
 
 // Pasa a variables los valores del post
 $fullname = $_POST['fullname'];
@@ -57,7 +56,7 @@ if ($appt_time == "" || $appt_time < $min_time
 
 if (count($invalid_fields) > 0) {
     // Retornar vista de error
-    include "error.view.php";
+    include "View/error.view.php";
 }
 else {
 
@@ -77,7 +76,6 @@ else {
 
     $turno_saver = new TurnoManager('turnos.txt');
 
-    var_dump($turno);
 
     $ok = $turno_saver->save_turno($turno);
 
@@ -85,10 +83,11 @@ else {
         // Informar turno guardado
         $view_message = "Turno guardado.";
 
-        include "/View/infoTurno.view.php";    
+        include "View/infoTurno.view.php";
     }
     else {
-        include "/View/saving.error.view.php";
+        $view_message = "No pudo guardarse el turno. Chequear fecha y hora esten libres.";
+        include "View/error.view.php";
     }
-    
+
 }

@@ -21,15 +21,21 @@ class TurnoManager
     		// Obtengo el array de turnos existentes
     		$turnos = $this->get_turnos();
 
-    		// Agrego a ese arreglo el nuevo turno
-    		$turnos[] = $turno;
+    		if ($this->turno_disponible($turnos, $turno))
+            {
+                $turno->id = $this->get_next_id($turnos);
 
-    		// Vuelvo a json para guardarlo
-	    	$encoded = json_encode($turnos);            
+                // Agrego a ese arreglo el nuevo turno
+                $turnos[] = $turno;
 
-	    	file_put_contents($this->path, $encoded);
+                // Vuelvo a json para guardarlo
+                $encoded = json_encode($turnos);
 
-	    	return true;
+                file_put_contents($this->path, $encoded);
+
+                return true;
+            }
+    		return false;
 		}
 
 		catch (Exception $e) {	
@@ -47,6 +53,7 @@ class TurnoManager
 
     		foreach($turnosEncoded as $turnoEncoded){
     			$turno = new Turno;
+    			$turno->id = $turnoEncoded['id'];
     			$turno->fullname = $turnoEncoded['fullname'];
 			    $turno->email = $turnoEncoded['email'];
 			    $turno->tel = $turnoEncoded['tel'];
@@ -64,7 +71,30 @@ class TurnoManager
     		return $turnos;
     	}
     	catch (Exception $e){
-    		return false;
+    		return [];
     	}
+    }
+
+    private function get_next_id($turnos)
+    {
+        if (count($turnos) > 0)
+        {
+            $last_turno = end($turnos);
+            return $last_turno->id + 1;
+        }
+        // Si no hay turnos, devuelvo 1
+        return 1;
+    }
+
+    private function turno_disponible($turnos, $nuevo_turno)
+    {
+        foreach ($turnos as $turno_previo){
+            if ($turno_previo->appt_date == $nuevo_turno->appt_date
+                && $turno_previo->appt_time == $nuevo_turno->appt_time)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
