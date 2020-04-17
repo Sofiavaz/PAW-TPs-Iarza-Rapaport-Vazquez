@@ -5,15 +5,16 @@
     <title>Ficha Turno</title>
 </head>
 <body>
-     <?php require "view/fichaturno.php" ?$turnox->$turnoEncoded ?>
+     <!--?php require "view/fichaturno.php" ?$turnox->$turnoEncoded ?-->
+     <nav><?php include 'navbar.view.php' ?></nav>
 <section class="Turno">
 <section class="Información del Turno">
     <h2> <b>Nro Turno:</b> <? echo $id;?> </h2>
     <div>
-        <label for="fecha" ><b>Fecha Turno:</b> <? echo $turnox['fecha' ];?> </label>
+        <label for="fecha" ><b>Fecha Turno:</b> <?= $turnox->appt_date?> </label>
     </div>
     <div>
-        <label for="horario" ><b>Horario Turno:</b> <? echo $turnox['horario'];?> </label>
+        <label for="horario" ><b>Horario Turno:</b> <?= date("H:i", $turnox->appt_time)?> </label>
     </div>
   </section>
  

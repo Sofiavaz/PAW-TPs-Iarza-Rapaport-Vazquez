@@ -27,7 +27,7 @@
 				<td><?= $turno->fullname ?></td>
 				<td><?= $turno->tel ?></td>
 				<td><?= $turno->email ?></td>
-				<td> <a href=" /fichaturno.view.php?$id={{$turno->id}}"> Ficha </a></td>
+				<td> <a href="/fichaturno.php?id=<?=$turno->id?>"> Ficha </a></td>
 			</tr>
 
 		<?php endforeach ?>

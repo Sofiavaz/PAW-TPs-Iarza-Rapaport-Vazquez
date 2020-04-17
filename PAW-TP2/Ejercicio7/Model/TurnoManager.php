@@ -98,4 +98,36 @@ class TurnoManager
         }
         return true;
     }
+
+
+    public function get_turno_by_id($id){
+    	try {
+    		$encoded = file_get_contents($this->path);
+
+    		$turnosEncoded = json_decode($encoded, true);
+
+            foreach($turnosEncoded as $turnoEncoded){
+                if ($turnoEncoded['id'] == $id) {
+                    $turno = new Turno;
+                    $turno->id = $turnoEncoded['id'];
+                    $turno->fullname = $turnoEncoded['fullname'];
+                    $turno->email = $turnoEncoded['email'];
+                    $turno->tel = $turnoEncoded['tel'];
+                    $turno->age= $turnoEncoded['age'];
+                    $turno->shoe_size = $turnoEncoded['shoe_size'];
+                    $turno->height = $turnoEncoded['height'];
+                    $turno->birthdate = $turnoEncoded['birthdate'];
+                    $turno->hair_color = $turnoEncoded['hair_color'];
+                    $turno->appt_date = $turnoEncoded['appt_date'];
+                    $turno->appt_time = $turnoEncoded['appt_time'];
+                    $turno->IdFicha = $turnoEncoded['id'];
+                    
+                    return $turno;
+                }
+    		}    		
+    	}
+    	catch (Exception $e){
+    		return null;
+    	}
+    }
 }
