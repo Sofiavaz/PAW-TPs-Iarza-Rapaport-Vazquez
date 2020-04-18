@@ -11,7 +11,6 @@ $turnox = $turno_manager->get_turno_by_id($IdFicha);
 
 include "View/fichaturno.view.php";
 
-
 /*try {
     $encoded = file_get_contents($this->path);
 
