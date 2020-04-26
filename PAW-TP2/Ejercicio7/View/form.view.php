@@ -48,6 +48,16 @@
         </p>
 
         <p>
+            <!--
+                La forma de modelar el campo este no es adecuada. Revisen este
+                comentario que les deje a sus compañeros de curso, donde les
+                armo un poco de codigo para que vean.
+
+                https://github.com/germanfernandez/TP2-WEB/pull/1/commits/87ccda604e6cc54fc2bfc68154e120b09e35b783#diff-fdd73ebbbf50804104fe811d9a3a9eb6R14
+
+                Deberian refactorizar esta parte para que quede como propongo
+                en ese Commit.
+            -->
             <label for="hairColor">Color de pelo:</label>
             <select name="hairColor" id="hairColor">
                 <option value="Morocho">Morocho</option>
