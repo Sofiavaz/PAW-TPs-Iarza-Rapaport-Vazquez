@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+
+{% block title %}Nuevo Turno{% endblock %}
+
+
+
+{% block main %}
+  <h1>Formulario Medico</h1>
+  {% if error != "" %}
+    <p>Campos con errores: {{ error }}</p>
+  {% endif %}
+  <form action="/turno/reserved" method="post" name="formulario" enctype="multipart/form-data">
+      <h3>Datos del Paciente</h3>
+
+        <label class="required" for="nombre">Nombre: </label>
+        <input name="nombre" type="text" required="required" maxlength=30 value="{{turno.nombre}}" />
+        <br><br>
+
+        <label class="required" for="email" >Email: </label>
+        <input name="email" type="email" required="required"  value="{{turno.email}}"/>
+        <br><br>
+      
+
+        <label class="required" for="telefono" >Teléfono: </label>
+        <input name="telefono" type="tel" required="required"value="{{turno.telefono}}"/>
+        <br><br>
+      
+        <label for="edad" >Edad: </label>
+        <input name="edad" type="number" min=0 max=130 value="{{turno.edad}}">
+        <br><br>
+      
+
+        <label for="talla-calzado" >Nro Calzado: </label>
+        <input name="talla-calzado" type="number" min=20 max=45  value="{{turno.talla_calzado}}">
+        <br><br>
+      
+
+        <label for="altura" >Altura: </label>
+        <input name="altura" type="range"  id="height" min="100" max="230"  value="{{turno.altura}}">
+        <br><br>
+      
+
+        <label class="required" for="fecha-nacimiento">Fecha de nacimiento: </label>
+        <input name="fecha-nacimiento" type="date" required="required"  value="{{turno.fecha_nacimiento}}">
+        <br><br>
+      
+ 
+        <label for="color-pelo" >Color de pelo: </label>
+        <select name="color-pelo" >
+          <option {% if (turno.color_pelo == null) %} selected="selected" {% endif %} value="null">No especifica</option>
+          <option {% if (turno.color_pelo == "Castaño") %} selected="selected" {% endif %} value="Castaño">Castaño</option>
+          <option {% if (turno.color_pelo == "Morocho") %} selected="selected" {% endif %} value="Morocho">Morocho</option>
+          <option {% if (turno.color_pelo == "Rubio") %} selected="selected" {% endif %} value="Rubio">Rubio</option>
+          <option {% if (turno.color_pelo == "Pelirrojo") %} selected="selected" {% endif %} value="Pelirrojo">Pelirrojo</option>
+          <option {% if (turno.color_pelo == "Calvo") %} selected="selected" {% endif %} value="Calvo">Calvo</option>
+        </select>
+        <br><br>
+      
+      <h3>Datos del Turno</h3>
+      
+
+        <label class="required" for="fecha-turno">Dia Turno: </label>
+        <input name="fecha-turno" type="date" required="required" value="{{turno.fecha_turno}}">
+        <br><br>
+      
+
+        <label class="required" for="horario-turno" > Hora turno: </label>
+        <input name="horario-turno" type="time" required="required" step="900" value="{{turno.horario_turno}}">
+        <br><br>
+      
+
+        <label for="diagnostico"> Diagnóstico: </label>
+        <input name="diagnostico" type="file" accept="image/jpeg, image/x-png"/ value="{{turno.diagnostico}}">
+        <br><br>
+      
+      <input  class="controls" type="submit" value="Enviar" name="submit">
+      <input  class="controls" type="reset" value="Borrar Campos">
+  </form>
+{% endblock %}

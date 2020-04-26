@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de turnos</title> 
+</head>
+<body>
+    <header>
+        {% block header %}
+        <nav>
+            {% block nav %}
+                {{ include('partials/nav.html') }}
+            {% endblock %}
+        </nav>
+        {% endblock %}
+    </header>
+    <main>{% block main %}{% endblock %}</main>
+    <footer>
+    </footer>
+</body>
+</html>

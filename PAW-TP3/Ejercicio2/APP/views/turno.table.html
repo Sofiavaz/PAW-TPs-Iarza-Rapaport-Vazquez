@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Turnos{% endblock %}
+
+{% block main %}
+  <h1>Tabla de Turnos</h1>
+  {% if turnos|length > 0 %}
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Fecha Turno</th>
+        <th>Hora Turno </th>
+        <th>Paciente</th>
+        <th>Teléfono</th>
+        <th>E-mail</th>
+        <th>Ficha</th>
+      </thead>
+      <tbody>
+        {% for turno in turnos %}
+        <tr>
+          <td> {{ turno.id }}</td>
+          <td> {{ turno.fecha_turno }}</td>
+          <td> {{ turno.horario_turno }}</td>
+          <td> {{ turno.nombre }}</td>
+          <td> {{ turno.telefono }}</td>
+          <td> {{ turno.email }}</td>
+          <td><a href="/turno/get/{{turno.id}}">Ficha </a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <span>No hay turnos registrados.</span>
+  {% endif %}
+{% endblock %}

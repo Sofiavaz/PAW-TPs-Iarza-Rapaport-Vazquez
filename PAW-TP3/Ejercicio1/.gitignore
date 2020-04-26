@@ -1,0 +1,4 @@
+
+logs/*.log
+vendor/
+public/uploads/*
