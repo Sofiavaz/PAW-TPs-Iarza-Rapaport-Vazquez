@@ -17,10 +17,6 @@ $nombre_img_tmp =$_FILES["diagnostico"]["tmp_name"];
 $extension = strtolower(pathinfo($nombre_imagen, PATHINFO_EXTENSION));
 $tamanio_imagen = $_FILES ["diagnostico"] ["size"];
 
-
-
-
-
 // Constantes de validacion de hora
 $min_time = strtotime("08:00");
 $max_time = strtotime("17:00");

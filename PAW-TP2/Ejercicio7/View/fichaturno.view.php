@@ -42,7 +42,10 @@
     </div>
     <div>
         <label for="pelo"><b>Pelo:</b> <?= $turnox->hair_color?> </label>
-    </div>    
+    </div>   
+    
+    <img src="<?= $turnox->destino ?>" alt="" style="height:100px">
+
 </section>  
  </section>
  

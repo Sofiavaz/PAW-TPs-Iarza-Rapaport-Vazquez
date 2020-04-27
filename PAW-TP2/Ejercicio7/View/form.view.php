@@ -11,7 +11,7 @@
         <?php include 'navbar.view.php' ?>
     </nav>
 
-    <form action="../alta_turno.php" method="POST">
+    <form action="../alta_turno.php" method="POST" enctype="multipart/form-data">
         <label for="fullname">Nombre:</label>
         <input type="text" name="fullname" id="fullname" required>
         <br><br> 
@@ -63,7 +63,10 @@
             step="900"
             required>
         <br><br> 
-        
+
+        <input type="file" name="diagnostico" id="diagnostico" accept=".jpg,.png" >
+        <br><br> 
+
         <input type="reset" name="reset" id="reset" value="Borrar campos">
         
         <input type="submit" name="submit" id="submit" value="Enviar">

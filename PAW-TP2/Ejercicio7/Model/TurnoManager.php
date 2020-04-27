@@ -65,6 +65,7 @@ class TurnoManager
 			    $turno->appt_date = $turnoEncoded['appt_date'];
                 $turno->appt_time = $turnoEncoded['appt_time'];
                 $turno->IdFicha = $turnoEncoded['id'];
+                $turno->destino = $turnoEncoded['destino'];
  				// Agrego el turno al array
  				$turnos[] = $turno;
     		}    		
@@ -120,7 +121,8 @@ class TurnoManager
                     $turno->hair_color = $turnoEncoded['hair_color'];
                     $turno->appt_date = $turnoEncoded['appt_date'];
                     $turno->appt_time = $turnoEncoded['appt_time'];
-                    $turno->IdFicha = $turnoEncoded['id'];
+                    $turno->destino = $turnoEncoded['destino'];
+                    //$turno->IdFicha = $turnoEncoded['id'];
                     
                     return $turno;
                 }
