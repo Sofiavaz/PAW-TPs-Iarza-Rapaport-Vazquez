@@ -4,19 +4,18 @@ include 'Model/TurnoManager.php';
 
 use app\Model\TurnoManager;
 use app\Model\Turno;
-use function Psy\debug;
 
 // Pasa a variables los valores del post
-$fullname = $_POST['fullname'];
-$email = $_POST['email'];
-$tel = $_POST['telephone'];
-$age = $_POST['age'];
-$shoe_size = $_POST['shoeSize'];
-$height = $_POST['height'];
-$birthdate = $_POST['birthdate'];
-$hair_color = $_POST['hairColor'];
-$appt_date = $_POST['apptDate'];
-$appt_time = strtotime($_POST['apptTime']);
+$fullname = htmlspecialchars($_POST['fullname']);
+$email = htmlspecialchars($_POST['email']);
+$tel = htmlspecialchars($_POST['telephone']);
+$age = htmlspecialchars($_POST['age']);
+$shoe_size = htmlspecialchars($_POST['shoeSize']);
+$height = htmlspecialchars($_POST['height']);
+$birthdate = htmlspecialchars($_POST['birthdate']);
+$hair_color = htmlspecialchars($_POST['hairColor']);
+$appt_date = htmlspecialchars($_POST['apptDate']);
+$appt_time = strtotime(htmlspecialchars($_POST['apptTime']));
 
 $Hora = time();
 $nombre_imagen = basename ($_FILES ["diagnostico"]["name"]);
