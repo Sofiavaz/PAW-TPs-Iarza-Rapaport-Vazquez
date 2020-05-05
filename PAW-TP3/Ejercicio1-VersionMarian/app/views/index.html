@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Turnos{% endblock %}
+
+{% block header %}
+    {{ include('partials/nav.html') }}
+{% endblock %}
+
+
+{% block main %}
+<h2>Turnos</h2>
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Fecha turno</th>
+		<th>Hora turno</th>
+		<th>Paciente</th>
+		<th>Teléfono</th>
+		<th>Email</th>
+		<th>Ficha</th>
+	</tr>		
+	{% for turno in turnos %}		
+		<tr>
+			<th> {{ turno.id }}</th>
+			<td> {{ turno.appt_date }}</td>
+			<td> {{ turno.appt_time }}</td>
+			<td> {{ turno.fullname }}</td>
+			<td> {{ turno.tel }}</td>
+			<td> {{ turno.email }}</td>		
+
+			<td> <a href="/turnos/show?id={{turno.id}}"> Ficha </a></td>
+		</tr>	
+	{% else %}
+		<span>No hay turnos registradas</span>
+	{% endfor %}	
+</table>	
+{% endblock %}
