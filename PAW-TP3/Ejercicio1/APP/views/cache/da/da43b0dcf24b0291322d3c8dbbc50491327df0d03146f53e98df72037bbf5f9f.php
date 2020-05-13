@@ -98,6 +98,6 @@ class __TwigTemplate_482ae55752bbeb72d826b2775a911d583ffc09a84c353225a4402fc796f
     <footer>
     </footer>
 </body>
-</html>", "base.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\base.html");
+</html>", "base.html", "C:\\Users\\maria\\Documents\\4-1\\paw\\PAW-TPs-Iarza-Rapaport-Vazquez\\PAW-TP3\\Ejercicio1\\APP\\views\\base.html");
     }
 }

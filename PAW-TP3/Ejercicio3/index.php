@@ -10,7 +10,6 @@ use App\Core\Logger;
 use App\Core\Exceptions\RouteNotFoundException as RouteNotFoundException;
 
 $logger = App::get('logger');
-$prueba = App::get('prueba');
 
 try {
     $render = Router::load('app/routes.php')

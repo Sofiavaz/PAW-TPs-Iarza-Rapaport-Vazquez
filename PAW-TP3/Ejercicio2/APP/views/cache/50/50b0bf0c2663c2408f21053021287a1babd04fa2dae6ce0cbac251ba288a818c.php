@@ -1,6 +1,6 @@
 <?php
 
-/* turno.reserved.html */
+/* turnos.reserved.html */
 class __TwigTemplate_266a11d135cb9f13b101775e53d09f316bcc2fa5851018b45c991592f486dc6d extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_266a11d135cb9f13b101775e53d09f316bcc2fa5851018b45c991592f48
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("turno.view.html", "turno.reserved.html", 1);
+        $this->parent = $this->loadTemplate("turno.view.html", "turnos.reserved.html", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'main' => array($this, 'block_main'),
@@ -50,7 +50,7 @@ class __TwigTemplate_266a11d135cb9f13b101775e53d09f316bcc2fa5851018b45c991592f48
 
     public function getTemplateName()
     {
-        return "turno.reserved.html";
+        return "turnos.reserved.html";
     }
 
     public function isTraitable()
@@ -73,6 +73,6 @@ class __TwigTemplate_266a11d135cb9f13b101775e53d09f316bcc2fa5851018b45c991592f48
   <h2 class=\"success\">Turno reservado con exito.</h2>
   {{ parent() }}
   <p class=\"gracias\">Gracias por atenderse con nosotros, lo esperamos.</p>
-{% endblock %}", "turno.reserved.html", "C:\\ProgWeb\\tp4-paw\\3\\app\\views\\turno.reserved.html");
+{% endblock %}", "turnos.reserved.html", "C:\\ProgWeb\\tp4-paw\\3\\app\\views\\turnos.reserved.html");
     }
 }

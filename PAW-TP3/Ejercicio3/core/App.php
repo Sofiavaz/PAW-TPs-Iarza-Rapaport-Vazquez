@@ -34,7 +34,7 @@ class App
         if (! array_key_exists($key, static::$registry)) {
             throw new Exception("No {$key} is bound in the container.");
         }
-        var_dump($key);
+
         return static::$registry[$key];
     }
 }

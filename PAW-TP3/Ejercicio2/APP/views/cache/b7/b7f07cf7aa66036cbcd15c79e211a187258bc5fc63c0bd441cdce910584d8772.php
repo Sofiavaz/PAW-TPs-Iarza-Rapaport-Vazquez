@@ -1,6 +1,6 @@
 <?php
 
-/* turno.reserved.html */
+/* turnos.reserved.html */
 class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419fa972 extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419
         $this->source = $this->getSourceContext();
 
         // line 2
-        $this->parent = $this->loadTemplate("base.html", "turno.reserved.html", 2);
+        $this->parent = $this->loadTemplate("base.html", "turnos.reserved.html", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'main' => array($this, 'block_main'),
@@ -141,7 +141,7 @@ class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419
 
     public function getTemplateName()
     {
-        return "turno.reserved.html";
+        return "turnos.reserved.html";
     }
 
     public function isTraitable()
@@ -229,6 +229,6 @@ Turno {{ turno.id }}
 {% endblock %}
 
 
-", "turno.reserved.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turno.reserved.html");
+", "turnos.reserved.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turnos.reserved.html");
     }
 }

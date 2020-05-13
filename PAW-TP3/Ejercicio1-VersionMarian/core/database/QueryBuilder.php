@@ -106,6 +106,6 @@ public function selectWhere($table, $parameter, $value)
         $whereClause = htmlspecialchars($parameter) . "=" . htmlspecialchars($value);        
         $statement = $this->pdo->prepare("select * from {$table} where {$whereClause}");
         $statement->execute();
-        return $statement->fetch();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 }

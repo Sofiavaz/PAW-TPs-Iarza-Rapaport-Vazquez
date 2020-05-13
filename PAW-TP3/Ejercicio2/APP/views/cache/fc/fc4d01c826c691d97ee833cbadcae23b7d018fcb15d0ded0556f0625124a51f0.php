@@ -1,6 +1,6 @@
 <?php
 
-/* turno.create.html */
+/* turnos.create.html */
 class __TwigTemplate_f53802eb40154357d12740d34a2e8d873a69a9889b633b3f27956090482537a6 extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_f53802eb40154357d12740d34a2e8d873a69a9889b633b3f27956090482
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html", "turno.create.html", 1);
+        $this->parent = $this->loadTemplate("base.html", "turnos.create.html", 1);
         $this->blocks = array(
             'head' => array($this, 'block_head'),
             'title' => array($this, 'block_title'),
@@ -181,7 +181,7 @@ class __TwigTemplate_f53802eb40154357d12740d34a2e8d873a69a9889b633b3f27956090482
 
     public function getTemplateName()
     {
-        return "turno.create.html";
+        return "turnos.create.html";
     }
 
     public function isTraitable()
@@ -271,6 +271,6 @@ class __TwigTemplate_f53802eb40154357d12740d34a2e8d873a69a9889b633b3f27956090482
       <input  class=\"controls\" type=\"reset\" value=\"Resetear\">
     </fieldset>
   </form>
-{% endblock %}", "turno.create.html", "C:\\xampp\\htdocs\\3\\3\\app\\views\\turno.create.html");
+{% endblock %}", "turnos.create.html", "C:\\xampp\\htdocs\\3\\3\\app\\views\\turnos.create.html");
     }
 }

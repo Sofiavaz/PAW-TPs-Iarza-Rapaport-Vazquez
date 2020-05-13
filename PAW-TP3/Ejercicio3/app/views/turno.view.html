@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Turno {{ turno.id }}
+{% endblock %}
+
+{% block header %}
+  {{ include('partials/nav.html') }}
+{% endblock %}
+
+{% block main %}
+<h2 class="success">--Ficha del Turno-- </h2>
+<h3>Datos del Turno:</h3>
+ 
+<div>
+  <label for="Fecha"><b>Fecha del Turno:</b> {{turno.fecha_turno}}</label>
+</div>
+<br>
+
+<div>
+  <label for="Horario"><b> Horario del turno: </b> {{  turno.horario_turno }} </label>
+</div>
+<br><br>
+
+<h3>Datos del Paciente: </h3>
+
+<div>
+  <label for="Nombre"><b>Nombre:</b>  {{ turno.nombre }}   </label>
+</div>
+ <br>
+
+<div>
+  <label for="Email:"><b>Email:</b>  {{ turno.email }}   </label>
+</div>
+<br>
+
+<div>
+  <label for="Teléfono:"><b>Teléfono:</b>  {{ turno.telefono }}   </label>
+</div>
+<br> 
+
+<div>
+  <label for="Edad:"><b>Edad:</b>  {{ turno.edad }}   </label>
+</div>
+<br> 
+
+<div>
+  <label for="Nro de Calzado:"><b>Nro de Calzado:</b>  {{ turno.talla_calzado }}   </label>
+</div>
+<br> 
+
+<div>
+  <label for="Altura:"><b>Altura:</b>  {{ turno.altura }}   </label>
+</div>
+<br> 
+
+<div>
+  <label for="Color de Pelo:"><b>Color de Pelo:</b>  {{ turno.color_pelo }}   </label>
+</div>
+<br> 
+
+<div>
+  <label for="Fecha de Nacimiento:"><b>Fecha de Nacimiento:</b>  {{ turno.fecha_nacimiento }}   </label>
+</div>
+<br> 
+
+<h3>Diagnóstico:</h3>
+{% if turno.diagnostico is not null %}
+   <img src="{{"/" ~ turno.target_dir ~ turno.diagnostico }}" alt="Diagnostico">
+{% else %}
+  <p>No</p>
+{% endif %}
+
+
+{% endblock %}

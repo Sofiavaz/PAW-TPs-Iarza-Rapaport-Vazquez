@@ -1,6 +1,6 @@
 <?php
 
-/* turno.create.html */
+/* turnos.create.html */
 class __TwigTemplate_dc508ad57aee236fbb7074da7109cfdd3bbe23af054abb07ad0c0b07df5c6389 extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_dc508ad57aee236fbb7074da7109cfdd3bbe23af054abb07ad0c0b07df5
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html", "turno.create.html", 1);
+        $this->parent = $this->loadTemplate("base.html", "turnos.create.html", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'main' => array($this, 'block_main'),
@@ -179,7 +179,7 @@ class __TwigTemplate_dc508ad57aee236fbb7074da7109cfdd3bbe23af054abb07ad0c0b07df5
 
     public function getTemplateName()
     {
-        return "turno.create.html";
+        return "turnos.create.html";
     }
 
     public function isTraitable()
@@ -273,6 +273,6 @@ class __TwigTemplate_dc508ad57aee236fbb7074da7109cfdd3bbe23af054abb07ad0c0b07df5
       <input  class=\"controls\" type=\"submit\" value=\"Enviar\" name=\"submit\">
       <input  class=\"controls\" type=\"reset\" value=\"Borrar Campos\">
   </form>
-{% endblock %}", "turno.create.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turno.create.html");
+{% endblock %}", "turnos.create.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turnos.create.html");
     }
 }

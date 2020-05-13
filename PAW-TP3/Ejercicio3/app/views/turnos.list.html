@@ -18,7 +18,9 @@
 		<th>Teléfono</th>
 		<th>Email</th>
 		<th>Ficha</th>
-	</tr>		
+		<th>Editar</th>
+		<th>Eliminar</th>
+	</tr>
 	{% for turno in turnos %}		
 		<tr>
 			<th> {{ turno.id }}</th>
@@ -28,6 +30,8 @@
 			<td> {{ turno.telefono }}</td>
 			<td> {{ turno.email }}</td>
 			<td><a href="/turnos/get/{{turno.id}}">Ficha </a></td>
+			<td><a href="/turnos/editar/{{turno.id}}">Editar</a></td>
+			<td><a href="/turnos/eliminar/{{turno.id}}">Eliminar</a></td>
 <!--			<form action="/turnos/show" method="POST">-->
 <!--				<td> <input type="submit" value="{{turno.id}}" id="{{turno.id}}" name="Ficha"></td>-->
 <!--			</form>-->

@@ -40,8 +40,8 @@ class QueryBuilder
     /**
      * Insert a record into a table.
      *
-     * @param  string $table
-     * @param  array  $parameters
+     * @param string $table
+     * @param array $parameters
      */
     public function insert($table, $parameters)
     {
@@ -78,34 +78,51 @@ class QueryBuilder
     {
         $cleaned_params = [];
         foreach ($parameters as $name => $value) {
-            $cleaned_params[str_replace('-', '', $name)] = $value ;
+            $cleaned_params[str_replace('-', '', $name)] = $value;
         }
         return $cleaned_params;
     }
 
 
-    /**
-     * Select all records from a database table.
-     *
-     * @param string $table
-     */
-    // public function selectWhere($table, $parameters)
-    // {
-    //     $whereClause = "";
-    //     foreach ($parameters as $param=>$value){
-    //         $whereClause. = htmlspecialchars($param) . " " . htmlspecialchars($value) . " "; 
-    //     }
-    //     $statement = $this->pdo->prepare("select * from {$table}");
-    //     $statement->execute();
-    //     return $statement->fetchAll(PDO::FETCH_CLASS);
-    // }
-
-
-public function selectWhere($table, $parameter, $value)
+    public function selectWhere($table, $parameter, $value)
     {
-        $whereClause = htmlspecialchars($parameter) . "=" . htmlspecialchars($value);        
-        $statement = $this->pdo->prepare("select * from {$table} where {$whereClause}");
+        $statement = $this->pdo->prepare("select * from $table where $parameter = :$parameter");
+        $statement->bindValue(":$parameter", $value);
         $statement->execute();
-        return $statement->fetch();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
+
+    public function update($tableName, $parameters)
+    {
+        $parameters = $this->cleanParameterName($parameters);
+
+        $sql = "update $tableName set ";
+
+        foreach ($parameters as $field=>$value){
+            $sql .= "$field = :$field, ";
+        }
+        $sql = rtrim($sql, ", ");
+        $sql .= " where id=:id;";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parameters);
+        } catch (Exception $e) {
+            $this->sendToLog($e);
+        }
+    }
+
+    public function delete($tableName, $id){
+        $sql = "delete from $tableName where id=:id";
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->bindValue(":id", $id);
+            $statement->execute();
+        }
+        catch (Exception $e){
+            $this->sendToLog($e);
+        }
+    }
+
 }

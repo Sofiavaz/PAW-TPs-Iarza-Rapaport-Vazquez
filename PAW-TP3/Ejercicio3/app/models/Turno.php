@@ -9,7 +9,6 @@ use App\Core\Model;
  */
 class Turno extends Model
 {
-
 	protected $table = 'turnos';
 
 	public function get(){
@@ -20,8 +19,19 @@ class Turno extends Model
 		$this->db->insert($this->table, $turno);
 	}
 
+	public function update(array $turno) {
+        $this->db->update($this->table, $turno);
+    }
+
 	public function getById($id){
 		return $this->db->selectWhere($this->table, "id", $id);
 	}
+
+	public function delete($turno){
+	    if ($turno->diagnostico) {
+            unlink($turno->diagnostico);
+        }
+	    $this->db->delete($this->table, $turno->id);
+    }
 
 }

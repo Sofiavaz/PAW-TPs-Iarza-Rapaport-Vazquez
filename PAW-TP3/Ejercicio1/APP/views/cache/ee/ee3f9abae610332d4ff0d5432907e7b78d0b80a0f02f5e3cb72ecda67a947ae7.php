@@ -41,6 +41,6 @@ class __TwigTemplate_6fa54c3fd000a7844049f4b6155fe5b3147f5281f09cbb9b6134d2f9747
         return new Twig_Source("<ul>
   <li><a href=\"/turno/create\">Sacar Turno</a></li>
   <li><a href=\"/turno/view/all\">Ver Turnos</a></li>
-</ul>", "partials/nav.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\partials\\nav.html");
+</ul>", "partials/nav.html", "C:\\Users\\maria\\Documents\\4-1\\paw\\PAW-TPs-Iarza-Rapaport-Vazquez\\PAW-TP3\\Ejercicio1\\APP\\views\\partials\\nav.html");
     }
 }
