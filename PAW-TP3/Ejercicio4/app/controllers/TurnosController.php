@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\Turno;
+use App\Utils\MyLogger;
 
 use App\Properties;
 use DateTime;
@@ -59,7 +60,9 @@ class TurnosController extends Controller
             'diagnostico' => $this->blob
         ];
         if ($error == "") {
-            $this->model->insert($turno);
+            $id = $this->model->insert($turno);
+            MyLogger::log("A", $id);
+
             $img_path = $this->base64ToImage($turno['diagnostico'], "public/uploads/img.png" );
             return view('turnos.reserved', compact('error', 'turno', 'img_path'));
         } else {
@@ -223,6 +226,8 @@ class TurnosController extends Controller
     public function update($vars){
         $id = $vars['id'];
 
+        $oldTurno = $this->model->getById($id);
+
         $error = $this->validateForm();
 
         $turno = [
@@ -242,6 +247,7 @@ class TurnosController extends Controller
 
         if ($error == "") {
             $this->model->update($turno);
+            MyLogger::log("M", json_encode($oldTurno));
             return view('turno.view', compact('error', 'turno'));
         } else {
             return view('turnos.edit', compact('error', 'turno'));
@@ -252,7 +258,7 @@ class TurnosController extends Controller
         $turno = $this->model->getById($vars['id'])[0];
 
         $this->model->delete($turno);
-
+        MyLogger::log("B", json_encode($turno));
         return $this->index();
     }
 

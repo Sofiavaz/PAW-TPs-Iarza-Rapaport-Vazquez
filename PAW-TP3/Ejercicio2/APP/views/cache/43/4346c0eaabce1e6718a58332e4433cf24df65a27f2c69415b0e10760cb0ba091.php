@@ -153,6 +153,6 @@ class __TwigTemplate_0bd25b8893e122e69b9e2ccf922836766e38f3b5d7387e5f08fc89a9a97
   {% else %}
     <span>No hay turnos registrados.</span>
   {% endif %}
-{% endblock %}", "turno.table.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turno.table.html");
+{% endblock %}", "turno.table.html", "C:\\Users\\maria\\Documents\\4-1\\paw\\PAW-TPs-Iarza-Rapaport-Vazquez\\PAW-TP3\\Ejercicio2\\APP\\views\\turno.table.html");
     }
 }

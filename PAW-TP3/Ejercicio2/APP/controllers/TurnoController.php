@@ -1,5 +1,6 @@
-
 <?php
+
+namespace App\Controllers;
 
 use \DateTime;
 use App\Core\Controller;
@@ -38,7 +39,7 @@ class TurnoController extends Controller
     public function ficha($vars)
     {
         $turno = (array) $this->model->findById($vars['id'])[0];
-        $img_path = $this->base64ToImage($turno['diagnostico'], "public/uploads/img.png");
+        $img_path = $this->base64ToImage($turno['diagnostico'], "/public/uploads/img.png");
         return view('turno.view', compact('turno', 'img_path'));
     }
 
@@ -66,7 +67,8 @@ class TurnoController extends Controller
         ];
         if ($error == "") {
           $this->model->insert($turno);
-          return view('turno.reserved', compact('error', 'turno'));
+          $img_path = $this->base64ToImage($turno->diagnostico, "/public/uploads/img.png" );
+          return view('turno.reserved', compact('error', 'turno', 'img_path'));
         } else {
           return view('turno.create', compact('error', 'turno'));
         }

@@ -62,7 +62,7 @@
 
 <h3>Diagnóstico:</h3>
 {% if turno.diagnostico is not null %}
-   <img src="{{"/" ~ turno.target_dir ~ turno.diagnostico }}" alt="Diagnostico">
+   <img src={{ img_path }} alt="Diagnostico">
 {% else %}
   <p>No</p>
 {% endif %}

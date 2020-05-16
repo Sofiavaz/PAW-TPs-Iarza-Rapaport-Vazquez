@@ -130,9 +130,9 @@ class __TwigTemplate_76acfdda1268cf7c477dee0bc94b56a113f86fde91ce80b917448fd56b7
         // line 64
         if ( !(null === twig_get_attribute($this->env, $this->source, ($context["turno"] ?? null), "diagnostico", array()))) {
             // line 65
-            echo "   <img src=\"";
-            echo twig_escape_filter($this->env, (("/" . twig_get_attribute($this->env, $this->source, ($context["turno"] ?? null), "target_dir", array())) . twig_get_attribute($this->env, $this->source, ($context["turno"] ?? null), "diagnostico", array())), "html", null, true);
-            echo "\" alt=\"Diagnostico\">";
+            echo "   <img src=";
+            echo twig_escape_filter($this->env, ($context["img_path"] ?? null), "html", null, true);
+            echo " alt=\"Diagnostico\">";
         } else {
             // line 67
             echo "  <p>No</p>";
@@ -220,12 +220,12 @@ class __TwigTemplate_76acfdda1268cf7c477dee0bc94b56a113f86fde91ce80b917448fd56b7
 
 <h3>Diagnóstico:</h3>
 {% if turno.diagnostico is not null %}
-   <img src=\"{{\"/\" ~ turno.target_dir ~ turno.diagnostico }}\" alt=\"Diagnostico\">
+   <img src={{ img_path }} alt=\"Diagnostico\">
 {% else %}
   <p>No</p>
 {% endif %}
 
 
-{% endblock %}", "turno.view.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turno.view.html");
+{% endblock %}", "turno.view.html", "C:\\Users\\maria\\Documents\\4-1\\paw\\PAW-TPs-Iarza-Rapaport-Vazquez\\PAW-TP3\\Ejercicio2\\APP\\views\\turno.view.html");
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-/* turnos.reserved.html */
+/* turno.reserved.html */
 class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419fa972 extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419
         $this->source = $this->getSourceContext();
 
         // line 2
-        $this->parent = $this->loadTemplate("base.html", "turnos.reserved.html", 2);
+        $this->parent = $this->loadTemplate("base.html", "turno.reserved.html", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'main' => array($this, 'block_main'),
@@ -130,9 +130,9 @@ class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419
         // line 65
         if ( !(null === twig_get_attribute($this->env, $this->source, ($context["turno"] ?? null), "diagnostico", array()))) {
             // line 66
-            echo "     <img src=\"";
-            echo twig_escape_filter($this->env, (("/" . twig_get_attribute($this->env, $this->source, ($context["turno"] ?? null), "target_dir", array())) . twig_get_attribute($this->env, $this->source, ($context["turno"] ?? null), "diagnostico", array())), "html", null, true);
-            echo "\" alt=\"Diagnostico\">";
+            echo "     <img src=";
+            echo twig_escape_filter($this->env, ($context["img_path"] ?? null), "html", null, true);
+            echo ">";
         } else {
             // line 68
             echo "    <p>No</p>";
@@ -141,7 +141,7 @@ class __TwigTemplate_e1fb8490317d6c390955570e46a599c77a7ec33fd178e2a4945a5cb2419
 
     public function getTemplateName()
     {
-        return "turnos.reserved.html";
+        return "turno.reserved.html";
     }
 
     public function isTraitable()
@@ -221,7 +221,7 @@ Turno {{ turno.id }}
 
   <h3>Diagnóstico:</h3>
   {% if turno.diagnostico is not null %}
-     <img src=\"{{\"/\" ~ turno.target_dir ~ turno.diagnostico }}\" alt=\"Diagnostico\">
+     <img src={{ img_path }}>
   {% else %}
     <p>No</p>
   {% endif %}
@@ -229,6 +229,6 @@ Turno {{ turno.id }}
 {% endblock %}
 
 
-", "turnos.reserved.html", "C:\\xampp\\htdocs\\3\\3\\APP\\views\\turnos.reserved.html");
+", "turno.reserved.html", "C:\\Users\\maria\\Documents\\4-1\\paw\\PAW-TPs-Iarza-Rapaport-Vazquez\\PAW-TP3\\Ejercicio2\\APP\\views\\turno.reserved.html");
     }
 }
