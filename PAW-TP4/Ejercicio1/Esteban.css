@@ -1,0 +1,141 @@
+
+header {
+	text-align: center;
+	background-color: #333333;
+    color: #ffffff;
+    
+}
+.col-1{
+    width: 50%;	
+	float:left;
+
+}
+
+h3,h2{
+    text-align: center;
+}
+
+.Dat-Personal{
+    width: 25%;	
+	float: left;
+}
+
+.Habilidades{
+    width: 100%;
+	float: left
+}
+
+.aliniarHabilidades{
+    width: 50%;
+	float: left
+
+}
+
+.logo{	
+	width: 8%;	
+	float: left;
+}
+
+ul,li {
+	list-style: none;
+	padding-left: 0;
+}
+
+.dateExpLab{
+    width: 20%;	
+	float: left;
+}
+
+.Desc1{
+    width: 60%;	
+	float:left;
+}
+
+
+.col-2{
+    width: 40%;	
+	float:right;
+}
+
+.col-2Educ{
+    width: 100%;
+	float: left
+}
+
+.DateEduc{
+    width: 15%;
+	float:left;
+}
+.DescEduc {
+    width: 65%;	
+	float:left;
+}
+
+.LenguajesInfo{
+    width: 30%;
+	float: right
+}
+
+.HabilidadesInfo{
+    width: 50%;
+	float: right
+}
+
+#LogoInfo{
+    background-image: url('infoIcon.png');
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 65px;
+}
+
+#LogoLenguajes{
+    background-image: url('langIcon.png');
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 65px;
+}
+#LogoHabilidades{
+    background-image: url('skillsIcon.png');
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 150px;
+	padding-top: 70px
+}
+
+#DatosPersonales{
+    float: right;
+	background-color:chocolate;
+	padding: 0 5vw;
+	margin-left: 1vw;
+}
+
+#Dat-Personal{
+    width: 25%;	
+	float: right;;
+}
+	
+
+#lapizRegla{
+    background-image: url('workXpIcon.png');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 40px;
+	padding-top: 50px;
+}
+
+#GorritoEducation{
+    background-image: url('academicsIcon.png');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 60px;
+	padding-top: 75px;
+}
+
+
+
+    

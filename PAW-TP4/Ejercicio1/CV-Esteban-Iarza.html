@@ -2,44 +2,82 @@
 <HTML lang = "UTF-8">
     <head>
         <title>CV - Iarza Esteban </title>
+        <link rel="stylesheet" type="text/css" href="C:\xampp\htdocs\TP4\Ejercicio1/Esteban.css">
     </head>
     <body>
-        <header>
+
+        <header class="col-1">
             <h1>Esteban Iarza </h1>
             <h2>Estudiante de sistemas de informacion</h2>
         </header>
 
-        <aside>
-            <h3>INFORMACION</h3>
-            <h3>25/08/1994</h3>
-            <h3> 29 Nº 42 Mercedes(Bs.As)</h3>
-            <h3>+54 02324-526449</h3>
-            <h3>iarzaesteban94@gmail.com</h3>
+        <section id="DatosPersonales" class="Dat-Personal">
 
-            <h3> LENGUAJES </h3>
+            <address>
+                <h2 id = "LogoInfo">INFORMACION</h2>
+                <h2 >25/08/1994</h2>
+                <h2 > 29 Nº 42 Mercedes(Bs.As)</h2>
+                <h2 >+54 02324-526449</h2>
+                <h2 >iarzaesteban94@gmail.com</h2>
+            </address>
 
-            <li>Ingles(básico)</li>
+                <h2 id = "LogoLenguajes" > LENGUAJES </h2>
 
-            <h3>HABILIDADES</h3>
+                <li>Ingles(básico)</li>
 
-            <li>Base Datos(Firebird)</li>
-            <li>Programacion(Java, pascal basico)</li>
-            <li>Redes(Configuracion y gestón)</li>
+                <h2 id = "LogoHabilidades"" >HABILIDADES</h2>
+                <ul class = "">
 
-        </aside>
+                    <li class="Habilidades">
+                        <p class="aliniarHabilidades">Base Datos(Firebird)</p>
+                        <p class="aliniarHabilidades align-right">2</p>
+                    </li>
 
-        <main>
-            <h3>EXPERIENCIA LABORAL</h3>
+                    <li class="Habilidades">
+                        <p class="aliniarHabilidades">Programacion(Java, pascal basico)</p>
+                        <p class="aliniarHabilidades align-right">2</p>
+                    </li>
+
+                    <li class="Habilidades">
+                        <p class="aliniarHabilidades">Redes(Configuracion y gestón)</p>
+                        <p class="aliniarHabilidades align-right">3</p>
+                    </li>
+                       
+
+                </ul>
+
+        </section>
+
+        
+
+        <main class= "col-1">
+            <section>
+            <h3 id="lapizRegla">EXPERIENCIA LABORAL</h3>
+            
             <ul>
-                <li>Febrero 2013 - Actualidad<p> Atención al público, Agencia de Loterias de la Provincia</p></li>
+                <li class = "dateExpLab center"> Febrero 2013 - Actualidad</li>
+                <img class= "logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6Ba2o40lebZnwEGOmh-Onqb0_IzIQUxmlxTf0ybL2TxV6pPic&usqp=CAU">
+                <p class = "Desc1"> Atención al público, Agencia de Loterias de la Provincia</p>
             </ul>
 
-            <h3> EDUCACIÓN </h3>
+            <h3 id= "GorritoEducation"> EDUCACIÓN </h3>
             <ul>
-                <li>Diciembre 2009 <p> Primaria completa(Colegio Pio X de San Jose)</p></li>
-                <li>Diciembre 2012 <p> Secundaria completa (Instituto madre Camila Rolón)</p></li>
-                <li> 2014 - Actualidad <p> Estudiante Sistemas de información(UNLu)</p></li>
+                <li class = "col-2Educ ">
+                    <p class = "DateEduc center">Diciembre 2009 </p>
+                    <p class = "DescEduc "> Primaria completa(Colegio Pio X de San Jose)</p>
+                </li>
+                <li class = "col-2Educ ">
+                    <p class = "DateEduc center">Diciembre 2012 </p>
+                    <p class = "DescEduc"> Secundaria completa (Instituto madre Camila Rolón)</p>
+                </li>
+                <li class = "col-2Educ ">
+                    <p class = "DateEduc center"> 2014 - Actualidad </p>
+                    <p class = "DescEduc"> Estudiante Sistemas de información(UNLu)</p>
+                </li>
+                
             </ul>
+
+        </section>
 
         </main>
 
