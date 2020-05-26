@@ -7,49 +7,49 @@
 {% endblock %}
 
 {% block main %}
-  <h1>Formulario Medico</h1>
+  <h2 class="title">Formulario Medico</h2>
   {% if error != "" %}
     <p>Campos con errores: {{ error }}</p>
   {% endif %}
   <form action="/turnos/actualizar/{{turno.id}}" method="post" name="formulario" enctype="multipart/form-data">
-      <h3>Datos del Paciente</h3>
-        <p>
+      <h3 class="subtitle">Datos del Paciente</h3>
+        <p class="col-30">
         <label class="required" for="nombre">Nombre: </label>
         <input name="nombre" id="nombre" type="text" required="required" maxlength=30 value="{{turno.nombre}}" />
         </p>
 
-        <p>
+        <p class="col-30">
         <label class="required" for="email" >Email: </label>
         <input name="email" id="email" type="email" required="required"  value="{{turno.email}}"/>
         </p>
 
-        <p>
+        <p class="col-30">
         <label class="required" for="telefono" >Teléfono: </label>
         <input name="telefono" id="telefono" type="tel" required="required"value="{{turno.telefono}}"/>
         </p>
 
 
-        <p>
+        <p class="col-30">
         <label for="edad" >Edad: </label>
         <input name="edad" id="edad" type="number" min=0 max=130 value="{{turno.edad}}">
         </p>
 
-        <p>
+        <p class="col-30">
         <label for="talla-calzado" >Nro Calzado: </label>
         <input name="talla-calzado" id="talla-calzado" type="number" min=20 max=45  value="{{turno.talla_calzado}}">
         </p>
 
-        <p>
+        <p class="col-30">
         <label for="altura" >Altura: </label>
         <input name="altura" type="range"  id="altura" min="100" max="230"  value="{{turno.altura}}">
         </p>
 
-        <p>
+        <p class="col-50">
         <label class="required" for="fecha-nacimiento">Fecha de nacimiento: </label>
         <input name="fecha-nacimiento" type="date" id="fecha-nacimiento" required="required"  value="{{turno.fecha_nacimiento}}">
         </p>
 
-        <p>
+        <p class="col-50">
         <label for="color-pelo" >Color de pelo: </label>
         <select name="color-pelo" id="color-pelo">
           {% for colorPelo in coloresPelo %}
@@ -58,24 +58,26 @@
         </select>
         </p>
       
-      <h3>Datos del Turno</h3>
+      <h3 class="subtitle col-100">Datos del Turno</h3>
 
-        <p>
-        <label class="required" for="fecha-turno">Dia Turno: </label>
-        <input name="fecha-turno" id="fecha-turno" type="date" required="required" value="{{turno.fecha_turno}}">
+        <p class="col-30">
+          <label class="required" for="fecha-turno">Dia Turno: </label>
+          <input name="fecha-turno" id="fecha-turno" type="date" required="required" value="{{turno.fecha_turno}}">
         </p>
 
-        <p>
-        <label class="required" for="horario-turno" > Hora turno: </label>
-        <input name="horario-turno" id="horario-turno" type="time" required="required" step="900" value="{{turno.horario_turno}}">
+        <p class="col-30">
+          <label class="required" for="horario-turno" > Hora turno: </label>
+          <input name="horario-turno" id="horario-turno" type="time" required="required" step="900" value="{{turno.horario_turno}}">
         </p>
 
-        <p>
-        <label for="diagnostico"> Diagnóstico: </label>
-        <input name="diagnostico" type="file" id="diagnostico" accept="image/jpeg, image/x-png" value="{{turno.diagnostico}}">
+        <p class="col-30">
+          <label for="diagnostico"> Diagnóstico: </label>
+          <input name="diagnostico" type="file" id="diagnostico" accept="image/jpeg, image/x-png" value="{{turno.diagnostico}}">
         </p>
-      
-      <input  class="controls" type="submit" value="Enviar" name="submit">
-      <input  class="controls" type="reset" value="Borrar Campos">
+
+      <p class="col-100 mt-3">
+        <input  class="controls btn btn-danger" type="reset" value="Borrar Campos">
+        <input  class="controls btn btn-lg btn-primary align-right" type="submit" value="Enviar" name="submit">
+      </p>
   </form>
 {% endblock %}

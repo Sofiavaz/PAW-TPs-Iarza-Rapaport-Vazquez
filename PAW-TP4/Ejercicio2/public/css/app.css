@@ -1,15 +1,40 @@
 :root {
   --main-blue: #006EC7;
+  --main-blue-darker: #004E97;
   --main-green: #009645;
+}
+
+@font-face {
+	font-family: swissFont;
+	src: url(../fonts/Swiss721CondensedBT.woff);
+}
+
+@font-face {
+	font-family: swissFontBold;
+	src: url(../fonts/swiss-721-bold-condensed-bt.woff);
+}
+
+@font-face {
+	font-family: swissFontItalic;
+	src: url(../fonts/Swiss721CondensedItalicBT.woff);
+}
+
+body{
+	font-family: swissFont, "Arial Narrow", sans-serif;
 }
 
 .container {
 	width: 80%;
 	margin-left: 10%;
+	margin-right: 10%;
 	float: left;
 }
 
-.col-10{	
+.center-items {
+	text-align: center;
+}
+
+.col-10{
 	width: 10%;	
 	float: left;
 }
@@ -26,6 +51,11 @@
 
 .col-25 {
 	width: 25%;
+	float:left;
+}
+
+.col-30 {
+	width: 30%;
 	float:left;
 }
 
@@ -47,6 +77,16 @@
 .col-85 {
 	width: 85%;	
 	float:left;
+}
+
+.col-100 {
+	width: 100%;
+	float: left;
+}
+
+
+.mt-3 {
+	margin-top: 3%;
 }
 
 a {
@@ -76,18 +116,31 @@ a {
 
 .navbar-link {
 	display: inline;
-	margin-left: 2vw;		
+	margin-left: 2vw;
+	border-bottom-color: white;
+}
+
+.navbar-link a:hover {
+	color: #dddddd;
+	transition-duration: 0.3s;
 }
 
 .navbar-link a {
 	color: #ffffff;
-	
+	transition-duration: 0.3s
 }
 
 .title {
 	background-color: var(--main-green);
 	color: #ffffff;
 	padding: 1vh
+}
+
+.subtitle {
+	border-bottom: solid 1px;
+	border-color: var(--main-blue);
+	color: var(--main-blue);
+	padding: 1vh;
 }
 
 .footer {
@@ -121,20 +174,85 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 .btn {
-	padding: 5px;
+	font-family: Arial;
+	font-size: 80%;
+	padding: 10px;
 	border: solid 1px;
-	border-radius: 15%;	
+	border-radius: 8%;
 	color: #ffffff;
+}
+
+.btn-sm {
+	padding: 15px;
+	font-size: 90%;
+}
+
+.btn-lg {
+	padding: 15px;
+	font-size: 90%;
 }
 
 .btn-green {
 	color: var(--main-green);
+	transition-duration: 0.2s;
+}
+
+.btn-green:hover {
+	background-color: var(--main-green);
+	color: #ffffff;
+	transition-duration: 0.2s;
 }
 
 .btn-blue {
 	color: var(--main-blue);
+	transition-duration: 0.2s;
+}
+
+.btn-blue:hover {
+	background-color: var(--main-blue);
+	color: #ffffff;
+	transition-duration: 0.2s;
 }
 
 .btn-red {
 	color: #cc2222;
+	transition-duration: 0.2s;
+}
+
+.btn-red:hover {
+	background-color: #cc2222;
+	color: #ffffff;
+	transition-duration: 0.2s;
+}
+
+.btn-primary {
+	background-color: var(--main-blue);
+	transition-duration: 0.2s;
+}
+
+.btn-primary:hover{
+	background-color: var(--main-blue-darker);
+	transition-duration: 0.2s;
+	cursor: pointer;
+}
+
+
+.btn-danger {
+	background-color: #cc2222;
+	color: #ffffff;
+	transition-duration: 0.2s;
+}
+
+.btn-danger:hover {
+	background-color: #bb1111;
+	cursor: pointer;
+}
+
+.align-right {
+	float: right;
+}
+
+.appt-field {
+	font-size: 110%;
+	line-height: 120%;
 }
