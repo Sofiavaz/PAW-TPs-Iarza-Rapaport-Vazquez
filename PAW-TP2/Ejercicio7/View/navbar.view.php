@@ -1,9 +1,9 @@
 <ul>
 	<li>
-		<a href="/View/form.view.php">Sacar turno</a>		
+		<a href="/turnos/alta">Sacar turno</a>		
 	</li>
 	<li>
-		<a href="/ver_turnos.php">Ver turnos</a>		
+		<a href="/">Ver turnos</a>		
 	</li>
 
 </ul>

@@ -1,0 +1,77 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+Turno {{ turno.id }}
+{% endblock %}
+
+{% block header %}
+{{ include('partials/nav.html') }}
+{% endblock %}
+
+{% block main %}
+  <h2 class="success title">Información del turno</h2>
+  <h3 class="subtitle">Datos del Turno:</h3>
+   
+  <div>
+    <p for="Fecha" class="appt-field col-50"><b>Fecha del Turno: </b> {{turno.fecha_turno}}</p>
+  </div>
+  
+
+  <div>
+    <p for="Horario" class="appt-field col-50"><b> Horario del turno: </b> {{  turno.horario_turno }} </p>
+  </div>
+  
+
+  <h3 class="subtitle col-100">Datos del Paciente: </h3>
+  
+  <div>
+    <p for="Nombre" class="appt-field col-30"><b>Nombre: </b>  {{ turno.nombre }}   </p>
+  </div>
+   
+
+  <div>
+    <p for="Email:" class="appt-field col-30"><b>Email: </b>  {{ turno.email }}   </p>
+  </div>
+  
+
+  <div>
+    <p for="Teléfono:" class="appt-field col-30"><b>Teléfono: </b>  {{ turno.telefono }}   </p>
+  </div>
+   
+ 
+  <div>
+    <p for="Edad:" class="appt-field col-30"><b>Edad: </b>  {{ turno.edad }}   </p>
+  </div>
+   
+
+  <div>
+    <p for="Nro de Calzado:" class="appt-field col-30"><b>Nro de Calzado: </b>  {{ turno.talla_calzado }}   </p>
+  </div>
+   
+
+  <div>
+    <p for="Altura:" class="appt-field col-30"><b>Altura: </b>  {{ turno.altura }}   </p>
+  </div>
+   
+
+  <div>
+    <p for="Color de Pelo:" class="appt-field col-50"><b>Color de Pelo: </b>  {{ turno.color_pelo }}   </p>
+  </div>
+   
+ 
+  <div>
+    <p for="Fecha de Nacimiento:" class="appt-field col-50"><b>Fecha de Nacimiento: </b>  {{ turno.fecha_nacimiento }}   </p>
+  </div>
+   
+
+  <h3 class="subtitle col-100">Diagnóstico:</h3>
+  {% if turno.diagnostico is not null %}
+     <img src="/{{ img_path }}">
+  {% else %}
+    <p>No</p>
+  {% endif %}
+
+{% endblock %}
+
+

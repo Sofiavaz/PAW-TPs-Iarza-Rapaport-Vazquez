@@ -42,13 +42,16 @@
     </div>
     <div>
         <label for="pelo"><b>Pelo:</b> <?= $turnox->hair_color?> </label>
-    </div>    
+    </div>   
+    
+    <img src="<?= $turnox->destino ?>" alt="" style="height:100px">
+
 </section>  
  </section>
  
   <aside class="volver">
     <ul>
-      <li><a href="View/navbar.view.php">Volver</a></li>
+      <li><a href="/">Volver</a></li>
     </ul>
   </aside>
 </body>
