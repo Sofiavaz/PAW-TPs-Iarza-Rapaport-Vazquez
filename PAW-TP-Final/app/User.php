@@ -4,6 +4,18 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use phpDocumentor\Reflection\Types\Boolean;
+
+
+/***
+ * Class User
+ * @package App
+ * @property int id
+ * @property string name
+ * @property string email
+ * @property string password
+ *
+ */
 
 class User extends Authenticatable
 {
@@ -35,4 +47,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     *
+     */
+    public function isTeacher() : boolean
+    {
+        return $this->hasVerifiedEmail();
+    }
 }
