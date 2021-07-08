@@ -63,28 +63,9 @@
     <p>
         <label for="apptDate">Dia turno:</label>
         <input type="date" name="apptDate" id="apptDate" required>
-    </p>
-
-    <p>
-        <label for="apptTime">Hora turno:</label>
-        <input 
-            type="time" 
-            name="apptTime" 
-            id="apptTime" 
-            min="08:00"
-            max="17:00"
-            step="900"
-            required>
-        
-    </p>
-    
-    <p>
-        <label for="diagnostico">Adjuntar diagnostico</label>
-        <input type="file" name="diagnostico" id="diagnostico" accept=".jpg,.png" required>
-    </p> 
 
         <input type="reset" name="reset" id="reset" value="Borrar campos">
-        
+
         <input type="submit" name="submit" id="submit" value="Enviar">
     </form>
 </body>

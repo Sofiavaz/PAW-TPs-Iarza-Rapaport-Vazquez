@@ -1,5 +1,7 @@
 <?php
 
+include 'functions.php';
+
 // Pasa a variables los valores del post
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
@@ -13,9 +15,10 @@ $appt_date = $_POST['apptDate'];
 $appt_time = strtotime($_POST['apptTime']);
 $nombre_imagen = $_FILES['adj']['name'];
 
-$carpeta_Destino = 'C:\xampp\htdocs\Ejercicio4\ ';
+$carpeta_Destino = './images/';
+$path_imagen = $carpeta_Destino . $nombre_imagen;
 
-move_uploaded_file($_FILES['adj']['tmp_name'],$carpeta_Destino.$nombre_imagen); 
+move_uploaded_file($_FILES['adj']['tmp_name'], $path_imagen);
 
 // Constantes de validacion de hora
 $min_time = strtotime("08:00");
@@ -48,8 +51,8 @@ if ($appt_date == ""){
     $invalid_fields[] = "Fecha turno";
 }
 
-if ($appt_time == "" || $appt_time < $min_time 
-    || $appt_time > $max_time) 
+if ($appt_time == "" || $appt_time < $min_time
+    || $appt_time > $max_time)
 {
     $invalid_fields[] = "Hora turno";
 }
@@ -60,5 +63,5 @@ if (count($invalid_fields) > 0) {
 }
 else {
     // Retornar vista resumen
-    include "infoTurno.html.php";
+    include "InfoTurno.html.php";
 }

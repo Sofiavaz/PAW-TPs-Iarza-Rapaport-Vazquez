@@ -21,3 +21,5 @@ Al definir un formulario, podemos utilizar el atributo *method* para indicar qu�
 Como consecuencia, al utilizar GET los datos son visibles en la URL, disminuyendo la seguridad. Por lo tanto, no debería ser utilizado para el envío de información sensible como contraseñas. En cambio, permite ciertas ventajas a la hora de **guardar la información obtenida como respuesta a la petición**, por ejemplo, añadirla a "favoritos" en el navegador, o cachearla.
 
 Las ventajas de POST se evidencian cuando se prefiere el resultado opuesto: **no dejar registro de los parámetros de la petición en el navegador**, imposibilidad de cachear tal resultado o envío de información sensible, sin mostrarla en la URL.
+
+**Nota**: Esto ultimo sucede por como se construye el mensaje, no? Dado que en las peticiones POST, el contenido de la petición va en el body, este ultimo es el que no se cachea.
